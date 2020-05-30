@@ -1,10 +1,9 @@
 import streams from "../apis/streams";
 
-
-export const signIn = (userId) => {
+export const signIn = userId => {
   return {
     type: "SIGN_IN",
-    payload:userId
+    payload: userId
   };
 };
 
@@ -14,9 +13,8 @@ export const signOut = () => {
   };
 };
 
-export const createStream = (formValues) => {
-  return (dispatch)=>{
-    streams.post('/streams', formValues)
-  }
+export const createStream = formValues => {
+  return dispatch => {
+    streams.post("/streams", formValues);
+  };
 };
-
